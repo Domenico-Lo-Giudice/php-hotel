@@ -87,7 +87,7 @@
   <tbody>
     <?php foreach ($hotels as $key => $info) : ?>
       <tr>
-        <th scope="row"> <?php echo $key ?> </th>
+        <th scope="row"> <?php echo $key + 1 ?> </th>
         <td> <?php echo $info['name'] ?> </td>
         <td> <?php echo $info['description'] ?> </td>
         <td> <?php echo $info['parking'] ?> </td>
