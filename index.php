@@ -53,7 +53,10 @@
 ];
 
 foreach($hotels as $informations) {
-    var_dump($informations);
+    // var_dump($informations);
+    foreach($informations as $info) {
+        // var_dump($info);
+    }
 }
 
 
@@ -70,6 +73,12 @@ foreach($hotels as $informations) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
-    
+    <ul>
+        <?php  foreach($hotels as $informations) { ?>
+            <?php  foreach($informations as $info) { ?>
+            <li><?echo $info ?></li>
+         <?php } ?>
+         <?php } ?>
+    </ul>
 </body>
 </html>
