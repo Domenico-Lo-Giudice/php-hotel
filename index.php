@@ -58,9 +58,7 @@
         // var_dump($info);
     }
 }
-
-
-   
+ 
 ?>
 
 <!DOCTYPE html>
@@ -79,9 +77,9 @@
       <th scope="col">#</th>
       <th scope="col">Nome</th>
       <th scope="col">Descrizione</th>
-      <th scope="col">Parcheggio</th>
-      <th scope="col">Voto</th>
-      <th scope="col">Distanza</th>
+      <th scope="col" class="text-center" >Parcheggio</th>
+      <th scope="col" class="text-center" >Voto</th>
+      <th scope="col" class="text-center" >Distanza</th>
     </tr>
   </thead>
   <tbody>
@@ -90,9 +88,17 @@
         <th scope="row"> <?php echo $key + 1 ?> </th>
         <td> <?php echo $info['name'] ?> </td>
         <td> <?php echo $info['description'] ?> </td>
-        <td> <?php echo $info['parking'] ?> </td>
-        <td> <?php echo $info['vote'] ?> </td>
-        <td> <?php echo $info['distance_to_center'] ?> </td>
+        
+        <td class="text-center"> <?php if ($info['parking'] == true) {
+            echo "Si";
+        }
+        else {
+            echo "No";
+        }
+        ?> </td>
+        
+        <td class="text-center" > <?php echo $info['vote'] ?> </td>
+        <td class="text-center" > <?php echo $info['distance_to_center'] . " km" ?> </td>
       </tr>
     <?php endforeach ?>
   </tbody>
